@@ -113,6 +113,9 @@ class WorkflowJobTemplateNode(WorkflowNodeBase):
     workflow_job_template = models.ForeignKey(
         'WorkflowJobTemplate',
         related_name='workflow_job_template_nodes',
+        blank=True,
+        null=True,
+        default=None,
         on_delete=models.CASCADE,
     )
 
